@@ -1,0 +1,12 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th *ngFor="let item of options.colsOptions">{{item.label}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let l of lista" (click)="select(l)">
+        <td *ngFor="let item of options.colsOptions">{{l[item.name]}}</td>
+      </tr>
+    </tbody>
+</table>
