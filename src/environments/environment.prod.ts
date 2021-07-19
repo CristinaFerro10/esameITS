@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  backendUrl: 'https://esameback.azurewebsites.net',
+  backendUrl: 'https://esameback.azurewebsites.net/api',
   services: {
     viaggi: 'viaggi',
     tappe: 'tappe',
