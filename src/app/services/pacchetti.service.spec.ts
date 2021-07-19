@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { DatoSensoreService } from './dato-sensore.service';
+import { PacchettiService } from './pacchetti.service';
 
-describe('DatoSensoreService', () => {
-  let service: DatoSensoreService;
+describe('PacchettiService', () => {
+  let service: PacchettiService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(DatoSensoreService);
+    service = TestBed.inject(PacchettiService);
   });
 
   it('should be created', () => {

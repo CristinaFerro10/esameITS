@@ -9,27 +9,10 @@ import { DataTableOptions } from '../datatable-option';
 export class DatatableComponent implements OnInit {
 
   @Input()
-  public lista: any[] = [{ nome: 'Gino', cognome: 'Rossi', indirizzo: 'indirizzo 1' },{ nome: 'Claudio', cognome: 'Verdi', indirizzo: 'indirizzo 01' }];
+  public lista!: any[];
 
   @Input()
-  public options: DataTableOptions = {
-    colsOptions: [{
-      label: 'Nome',
-      name: 'nome',
-      type: 'text'
-    },
-    {
-      label: 'Cognome',
-      name: 'cognome',
-      type: 'text'
-    },
-    {
-      label: 'Indirizzo',
-      name: 'indirizzo',
-      type: 'text'
-    }
-    ]
-  };
+  public options!: DataTableOptions;
 
   @Output()
   onSelect: EventEmitter<any> = new EventEmitter<any>();

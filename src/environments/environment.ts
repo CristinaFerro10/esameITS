@@ -6,9 +6,9 @@ export const environment = {
   production: false,
   backendUrl: 'http://localhost:9200/api',
   services: {
-    mezzi: '/mezzoTrasporto',
-    datoposizionamento: '/datoPosizionamento',
-    datosensore: '/datoSensore'
+    viaggi: 'viaggi',
+    tappe: 'tappe',
+    pacchetti: 'pacchetti',
   }
 };
 

@@ -1,0 +1,17 @@
+<a routerLink="/home" class="float-right">Home</a>
+<h1 class="mb-4 text-lg font-semibold">Dettaglio viaggio: {{viaggio}}</h1>
+<app-datatable [options]="options" [lista]="lista" (onSelect)="select($event)"></app-datatable>
+
+<div class="modal-dialog modal-dialog-centered" *ngIf="mostraDialog">
+    <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Visualizzazione pacchetti della tappa: {{tappa}}
+          </h5>
+          <button type="button" class="btn-close" aria-label="Close" (click)="chiudiDialog()"></button>
+        </div>
+        <div class="modal-body">
+            <app-datatable *ngIf="listaPacchetti.length !== 0" [options]="optionsPacchetti" [lista]="listaPacchetti"></app-datatable>
+            <div *ngIf="listaPacchetti.length === 0">Nessun pacchetto presente per questa tappa</div>
+        </div>
+      </div>
+  </div>

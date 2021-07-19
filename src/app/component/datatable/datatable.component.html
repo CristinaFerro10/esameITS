@@ -6,7 +6,10 @@
     </thead>
     <tbody>
       <tr *ngFor="let l of lista" (click)="select(l)">
-        <td *ngFor="let item of options.colsOptions">{{l[item.name]}}</td>
+        <td *ngFor="let item of options.colsOptions; let i = index">
+          <span *ngIf="item.type !== 'date'">{{l[item.name]}}</span>
+          <span *ngIf="item.type === 'date'">{{l[item.name] | date:'dd/MM/yyyy'}}</span>
+        </td>
       </tr>
     </tbody>
 </table>
